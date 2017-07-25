@@ -1,0 +1,150 @@
+header {
+	display: flex;
+	flex-flow: column nowrap;
+	.header-wrap {
+
+		.header-main {
+			background-image: url('../img/header-bg.jpg');
+			background-size: 100% 100%;
+			background-color: @grey;
+			background-repeat: no-repeat;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20px;
+			box-sizing: border-box;
+			.logo {
+				display: flex;
+				flex-flow: row nowrap;
+				text-decoration: none;
+				.logo-img {
+					img {
+						height: 40px;
+					}
+				}
+				.logo-name {
+					h1 {
+						.h-font();
+						margin: 0;
+						height: 40px;
+						line-height: 40px;
+						font-size: 40px;
+						font-weight: 400;
+						color: #fff;
+					}
+				}
+				&:hover {
+					opacity: 0.7;
+				}
+				&:active {
+					opacity: 1;
+				}
+			}
+		}
+
+		.burger {
+			padding: 0;
+			border: transparent;
+			outline: none;
+			height: 30px;
+			width: 40px;
+			box-sizing: border-box;
+			&:hover {
+				cursor: pointer;
+				.bar {
+					opacity: 0.7;
+				}
+			}
+			.bar {
+				height: 5px;
+				margin-bottom: 5px;
+				background-color: #fff;
+				transition: 0.5s;
+				&:last-child {
+					margin:0;
+				}
+			}
+			&.cross {
+				.bar {
+					transition: 0.5s;
+					&:first-child {
+						transform: translateY(12px) rotate(315deg);
+					}
+					&:nth-child(2) {
+						background-color: transparent;
+					}
+					&:last-child {
+						transform: translateY(-8px) rotate(-315deg);
+					}
+				}
+			}
+		}
+
+		.dropdown {
+			box-sizing: border-box;
+			.l-p();
+			font-size: 12px;
+			background-color: darken(@grey, 10%);
+			nav {
+				display: flex;
+				width: 100%;
+				flex-flow: column nowrap;
+				ul {
+					display: block;
+					margin: 0;
+					padding: 0;
+					li {
+						display: block;
+						list-style: none;
+						list-style-position: inside;
+						padding: 5px 0;
+						text-align: center;
+						border: 1px solid #fff;
+						&:not(:first-child) {
+							border-top: none;
+						}
+						&:hover {
+							color: @beige;
+						}
+						&:active {
+							background-color: #fff;
+							color: @grey;
+						}
+					}
+				}
+			}
+			.icons {
+				box-sizing: border-box;
+				border: 1px solid #fff;
+				padding: 10px 0;
+				text-align: center;
+				a {
+					text-decoration: none;
+					&:active {
+						opacity: 0.5;
+					}
+					&:visited {
+						color: #fff;
+					}
+				}
+				i {
+					font-size: 14px;
+					line-height: 14px;
+					margin: 0 5px;
+					&:hover {
+						color: @beige;
+					}
+
+				}
+				input {
+					border: none;
+					border-radius: 10px;
+					padding-left: 8px;
+					outline: none;
+				}
+			}
+			display: none;
+		}
+	}
+}
