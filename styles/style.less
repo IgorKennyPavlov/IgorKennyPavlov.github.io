@@ -8,6 +8,38 @@
 
 
 
-// @media screen and (min-width: 992px) {
-	
-// }
+@media screen and (min-width: 992px) {
+	.content {
+		width: @width-l;
+	}
+
+
+
+	header {
+		.header-wrap {
+			justify-content: space-around;
+		}
+	}
+
+	main {
+		.features {
+			flex-wrap: nowrap;
+			margin: 20px 0 40px 0;
+		}
+		.poster {
+			padding-top: 30px;
+		}
+		.latest-projects {
+			.gallery {
+				a {
+					margin: 40px;
+				}
+			}
+		}
+		.video {
+			&__description {
+				top: 30%;
+			}
+		}
+	}
+}
