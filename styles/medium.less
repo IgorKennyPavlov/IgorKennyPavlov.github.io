@@ -248,25 +248,26 @@
 					flex-flow: row nowrap;
 					padding: 0;
 					justify-content: center;
-					a {
-						text-decoration: none;
+
+					li {
+						display: block;
+						list-style: none;
+						list-style-position: inside;
+						text-align: center;
+						padding: 3px 10px;
 						border-radius: calc(@width-m/200);
 						border: 1px solid @l-grey;
 						margin: 0 5px;
-						li {
-							display: block;
-							list-style: none;
-							list-style-position: inside;
-							text-align: center;
-							padding: 3px 10px;
-							.d-p();
-							height: calc(@width-m/60);
-							font-size: calc(@width-m/80);
-							line-height: calc(@width-m/60);
-							&:hover {
-								color: #fff;
-								background-color: darken(@beige, 10%);
+						.d-p();
+						height: calc(@width-m/60);
+						font-size: calc(@width-m/80);
+						line-height: calc(@width-m/60);
+						a {
+							text-decoration: none;
 							}
+						&:hover {
+							color: #fff;
+							background-color: darken(@beige, 10%);
 						}
 					}
 				}
