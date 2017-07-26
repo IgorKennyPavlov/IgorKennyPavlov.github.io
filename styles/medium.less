@@ -289,14 +289,22 @@
 							span {
 								display: inline-block;
 								color: @beige;
-								margin: 25px 0 0px 20px;
+								margin: 25px 0 0px 10px;
 							}
 							p {
 								display: inline-block;
 								color: @l-grey;
 								width: auto;
-								margin: 5px 0 20px 20px;
+								margin: 5px 0 20px 10px;
 							}
+					}
+					&:after {
+						content: "";
+						position: absolute;
+						top: 75px;
+						left: 10%;
+						border: 10px solid transparent;
+						border-bottom: 5px solid #fbfaf8;
 					}
 					&:hover {
 						background-color: #362f2d;
@@ -305,6 +313,9 @@
 						}
 						p {
 							color: @beige;
+						}
+						&:after {
+							border-bottom-color: #362f2d;
 						}
 					}
 					&:active {
